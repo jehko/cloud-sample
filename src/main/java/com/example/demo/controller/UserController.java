@@ -1,13 +1,15 @@
 package com.example.demo.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RequestMapping("/api/v1")
+@RestController
 public class UserController {
 
-    @GetMapping("/api/v1/user")
-    public String getUserId() {
-        return "82223053";
-    }
+    @GetMapping("/user")
+    public ResponseEntity<?> getUserId() {
+        String userId = "82223053";
+        return ResponseEntity.ok(userId);
 }
