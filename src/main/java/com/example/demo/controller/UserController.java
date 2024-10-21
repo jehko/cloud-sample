@@ -12,4 +12,5 @@ public class UserController {
     public ResponseEntity<?> getUserId() {
         String userId = "82223053";
         return ResponseEntity.ok(userId);
+    }
 }
